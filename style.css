@@ -346,9 +346,75 @@ p {
 	margin-bottom: 3rem;
 }
 
+.nav-toggle {
+	display: none;
+}
+
 blockquote {
 	border-left: 5px solid var(--primary);
 	padding: 1.5rem;
+}
+
+@media screen and (max-width: 1023px) {
+	.nav-header {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
+
+	.nav-logo {
+		margin: 0;
+	}
+
+	.nav-toggle {
+		display: block;
+		width: 4rem;
+		height: 4rem;
+		cursor: pointer;
+		position: absolute;
+		left: calc(100% - 4rem);
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.nav-toggle i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 3.5rem;
+		background-image: linear-gradient(
+			to right bottom,
+			var(--secondary),
+			var(--primary)
+		);
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+	}
+
+	.nav-toggle i:last-child,
+	.nav-toggle.active i:first-child {
+		display: none;
+	}
+
+	.nav-toggle.active i:last-child {
+		display: inline-block;
+	}
+
+	.nav-content {
+		display: none;
+		flex-direction: column;
+	}
+
+	.nav-content.active {
+		display: flex;
+		margin-bottom: -3rem;
+	}
+
+	.nav-item {
+		margin-top: 1.5rem;
+	}
 }
 
 @media screen and (max-width: 767px) {
