@@ -409,7 +409,6 @@ blockquote {
 
 	.nav-content.active {
 		display: flex;
-		margin-bottom: -3rem;
 	}
 
 	.nav-item {
