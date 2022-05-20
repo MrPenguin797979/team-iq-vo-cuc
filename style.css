@@ -15,6 +15,7 @@ body {
 	font-size: 1.6rem;
 	font-weight: 500;
 	padding: 2rem;
+	background-color: #fafcff;
 }
 
 html {
@@ -59,9 +60,10 @@ body::-webkit-scrollbar-thumb {
 .nav-logo {
 	display: block;
 	margin: 0 auto;
-	width: 15rem;
-	height: 15rem;
+	width: 16rem;
+	height: 16rem;
 	cursor: pointer;
+	object-fit: cover;
 }
 
 .nav-content {
@@ -111,6 +113,7 @@ body::-webkit-scrollbar-thumb {
 	display: flex;
 	flex-direction: column;
 	transition: 0.25s linear;
+	background-color: #fff;
 }
 
 .card:hover {
@@ -360,6 +363,9 @@ blockquote {
 
 	.nav-logo {
 		margin: 0;
+		width: 16rem;
+		height: 16rem;
+		margin-left: -1.5rem;
 	}
 
 	.nav-toggle {
