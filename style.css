@@ -346,10 +346,6 @@ p {
 	margin-bottom: 3rem;
 }
 
-.nav-toggle {
-	display: none;
-}
-
 blockquote {
 	border-left: 5px solid var(--primary);
 	padding: 1.5rem;
@@ -367,9 +363,11 @@ blockquote {
 	}
 
 	.nav-toggle {
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 4rem;
-		height: 4rem;
+		height: 6rem;
 		cursor: pointer;
 		position: absolute;
 		left: calc(100% - 4rem);
@@ -377,29 +375,45 @@ blockquote {
 		transform: translateY(-50%);
 	}
 
-	.nav-toggle i {
+	.nav-line {
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		font-size: 3.5rem;
+		height: 5px;
+		width: 100%;
+		border-radius: 6px;
 		background-image: linear-gradient(
 			to right bottom,
 			var(--secondary),
 			var(--primary)
 		);
-		color: transparent;
-		-webkit-background-clip: text;
-		background-clip: text;
+		transition: all 0.5s linear;
 	}
 
-	.nav-toggle i:last-child,
-	.nav-toggle.active i:first-child {
-		display: none;
+	.nav-line.one {
+		top: 15px;
 	}
 
-	.nav-toggle.active i:last-child {
-		display: inline-block;
+	.nav-toggle.active .nav-line.one {
+		top: 50%;
+		transform: translateY(-50%) rotate(45deg);
+	}
+
+	.nav-line.two {
+		left: 0;
+		opacity: 1;
+	}
+
+	.nav-toggle.active .nav-line.two {
+		left: -100%;
+		opacity: 0;
+	}
+
+	.nav-line.three {
+		bottom: 15px;
+	}
+
+	.nav-toggle.active .nav-line.three {
+		top: 50%;
+		transform: translateY(-50%) rotate(-45deg);
 	}
 
 	.nav-content {
@@ -412,7 +426,7 @@ blockquote {
 	}
 
 	.nav-item {
-		margin-top: 1.5rem;
+		margin-top: 2rem;
 	}
 }
 
