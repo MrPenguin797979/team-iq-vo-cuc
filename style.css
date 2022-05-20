@@ -288,8 +288,8 @@ body::-webkit-scrollbar-thumb {
 
 .main-about {
 	display: block;
-	max-width: 90rem;
 	margin: 0 auto;
+	max-width: 90rem;
 	padding: 2rem;
 }
 
@@ -425,6 +425,10 @@ blockquote {
 
 	.list {
 		--columns: 1;
+	}
+
+	.main-about {
+		padding: 0;
 	}
 }
 
