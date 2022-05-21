@@ -311,7 +311,7 @@ p {
 .main-content-title {
 	font-weight: 700;
 	font-size: 3rem;
-	margin: 3rem 0;
+	margin-bottom: 3rem;
 }
 
 .main-content .first-line::first-letter {
