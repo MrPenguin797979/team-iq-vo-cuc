@@ -355,6 +355,16 @@ p {
 	grid-column-gap: 2.5rem;
 }
 
+.layout-image {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	transition: 0.5s ease;
+	cursor: pointer;
+}
+
+.layout-image:hover {
+	transform: scale(1.05);
+}
+
 blockquote {
 	border-left: 5px solid var(--primary);
 	padding: 1.5rem;
@@ -455,6 +465,11 @@ blockquote {
 
 	.main-about {
 		padding: 0;
+	}
+
+	.layout {
+		display: flex;
+		flex-direction: column;
 	}
 }
 
