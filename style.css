@@ -94,13 +94,22 @@ body::-webkit-scrollbar-thumb {
 	background-image: linear-gradient(to right, #2cccff, #20e3b2);
 }
 
+.heading {
+	background-image: linear-gradient(to bottom, #2cccff, #20e3b2);
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	margin-bottom: 40px;
+	margin-top: -23px;
+	text-align: center;
+}
+
 .cards {
 	--spacing: 3rem;
 	--columns: 3;
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: calc(var(--spacing) * (-1));
-	margin-top: 2rem;
 }
 
 .card {
@@ -212,6 +221,12 @@ body::-webkit-scrollbar-thumb {
 	color: #fff;
 	display: flex;
 	align-items: center;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-word;
 }
 
 .card-type span {
