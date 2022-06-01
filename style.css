@@ -200,6 +200,7 @@ body::-webkit-scrollbar-thumb {
 .card-footer {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 2.5rem;
 	border-top: 1px solid #eee;
 }
