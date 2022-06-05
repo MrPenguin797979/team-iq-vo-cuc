@@ -69,8 +69,7 @@ body::-webkit-scrollbar-thumb {
 .nav-brand {
   display: block;
   text-align: center;
-  margin-top: 22px;
-  margin-bottom: 40px;
+  margin: 22px 0;
   font-size: 2rem;
   animation: loading 2s linear infinite alternate;
   font-weight: 500;
