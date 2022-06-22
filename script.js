@@ -1,7 +1,7 @@
-const navToggle = document.getElementsByClassName("nav-toggle")[0];
-const navContent = document.getElementsByClassName("nav-content")[0];
+const navToggle = document.querySelector(".nav-toggle");
+const navContent = document.querySelector(".nav-content");
 
 navToggle.addEventListener("click", () => {
-	navToggle.classList.toggle("active");
-	navContent.classList.toggle("active");
+  navToggle.classList.toggle("active");
+  navContent.classList.toggle("active");
 });
