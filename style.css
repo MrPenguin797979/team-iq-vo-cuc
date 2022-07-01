@@ -451,6 +451,7 @@ blockquote {
 
 @media screen and (max-width: 1023px) {
   .nofication-content {
+    width: 80%;
     height: 80%;
     overflow-y: scroll;
   }
