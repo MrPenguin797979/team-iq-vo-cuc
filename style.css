@@ -481,6 +481,12 @@ blockquote {
     cursor: pointer;
     position: absolute;
     left: 0;
+    z-index: 9999;
+  }
+
+  .nav-toggle.active {
+    position: fixed;
+    margin-left: 20px;
   }
 
   .nav-line {
@@ -525,12 +531,22 @@ blockquote {
   }
 
   .nav-content {
-    display: none;
+    transform: translateX(-100%);
+    transition: transform 0.25s linear;
     flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9998;
+    background-color: #fff;
   }
 
   .nav-content.active {
     display: flex;
+    transform: translateX(0);
+    left: 0;
+    right: 0;
   }
 
   .nav-item {
